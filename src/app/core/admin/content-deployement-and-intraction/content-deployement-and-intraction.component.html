@@ -1,0 +1,579 @@
+<div class="header pb-6">
+  <div class="container-fluid">
+    <div class="header-body">
+      <div class="row align-items-center py-4">
+        <div class="col-lg-6 col-7">
+          <h6 class="h2 text-dark d-inline-block mb-0">
+            Content And Conversion Strategy
+          </h6>
+
+          <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class="breadcrumb-item">
+                <a href="javascript:void(0)">
+                  <i class="fas fa-chart-area text-dark"> </i>
+                </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div class="col-lg-6 col-5 text-right text-white">
+          <a class="btn btn-sm btn-default" (click)="openModal(addModal)">
+            Create Content
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt--6">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-secondary">
+          <h5 class="h3 mb-0">Conversion</h5>
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush list">
+            <li class="list-group-item px-0">
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  <a class="avatar rounded-circle" href="javascript:void(0)">
+                    <i class="far fa-chart-bar"></i>
+                  </a>
+                </div>
+
+                <div class="col">
+                  <h5>Organisation</h5>
+
+                  <div class="progress-xs mb-0">
+                    <progressbar type="warning" [value]="60"> </progressbar>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="list-group-item px-0">
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  <a class="avatar rounded-circle" href="javascript:void(0)">
+                    <i class="far fa-chart-bar"></i>
+                  </a>
+                </div>
+
+                <div class="col">
+                  <h5>Management</h5>
+
+                  <div class="progress-xs mb-0">
+                    <progressbar type="success" [value]="100"> </progressbar>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="list-group-item px-0">
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  <a class="avatar rounded-circle" href="javascript:void(0)">
+                    <i class="far fa-chart-bar"></i>
+                  </a>
+                </div>
+
+                <div class="col">
+                  <h5>Management</h5>
+
+                  <div class="progress-xs mb-0">
+                    <progressbar type="danger" [value]="72"> </progressbar>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="list-group-item px-0">
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  <a class="avatar rounded-circle" href="javascript:void(0)">
+                    <i class="far fa-chart-bar"></i>
+                  </a>
+                </div>
+
+                <div class="col">
+                  <h5>Management</h5>
+
+                  <div class="progress-xs mb-0">
+                    <progressbar type="info" [value]="90"> </progressbar>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-secondary">
+          <h5 class="h3 mb-0">Content Scheduled</h5>
+        </div>
+
+        <div class="card-body p-0">
+          <div class="calendar" data-toggle="calendar" id="calendar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-secondary">
+          <h5 class="h3 mb-0">Conversion</h5>
+        </div>
+        <div class="card-body p-0">
+          <div class="list-group list-group-flush">
+            <a
+              class="list-group-item list-group-item-action flex-column align-items-start py-4 px-4"
+              href="javascript:void(0)"
+            >
+              <div class="d-flex w-100 justify-content-between">
+                <div>
+                  <div class="d-flex w-100 align-items-center">
+                    <a class="avatar avatar-xs mr-2 bg-white">
+                      <i class="fab fa-facebook text-blue"></i>
+                    </a>
+
+                    <h5 class="mb-1">Facebook</h5>
+                  </div>
+                </div>
+
+                <small> 2 hrs ago </small>
+              </div>
+
+              <h4 class="mt-3 mb-1"></h4>
+              <div class="row">
+                <div class="col-md-10">
+                  <p class="text-sm mb-0">
+                    The water services industry in Selangor, Federal Territories
+                    of Kuala Lumpur and Putrajaya has been highly fragmented and
+                    inefficient for more than two decades since the
+                    privatisation of water services which started in 1994.
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <button
+                    class="btn btn-sm btn-default"
+                    (click)="openModal(addModal)"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    (click)="successAlert('Enabled Content')"
+                    class="btn btn-sm btn-success"
+                  >
+                    Enable
+                  </button>
+                  <button
+                    (click)="successAlert('Disabled Content')"
+                    class="btn btn-sm btn-primary"
+                  >
+                    Disable
+                  </button>
+                  <button
+                    (click)="successAlert('Post Content')"
+                    class="btn btn-sm btn-info"
+                  >
+                    Post Now
+                  </button>
+                  <button
+                    (click)="successAlert('Delete Content')"
+                    class="btn btn-sm btn-danger"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="list-group-item list-group-item-action flex-column align-items-start py-4 px-4"
+              href="javascript:void(0)"
+            >
+              <div class="d-flex w-100 justify-content-between">
+                <div>
+                  <div class="d-flex w-100 align-items-center">
+                    <a class="avatar avatar-xs mr-2 bg-white">
+                      <i class="fab fa-twitter text-blue"></i>
+                    </a>
+
+                    <h5 class="mb-1">Twitter</h5>
+                  </div>
+                </div>
+
+                <small> 1 day ago </small>
+              </div>
+
+              <h4 class="mt-3 mb-1"></h4>
+
+              <div class="row">
+                <div class="col-md-10">
+                  <p class="text-sm mb-0">
+                    The water services industry in Selangor, Federal Territories
+                    of Kuala Lumpur and Putrajaya has been highly fragmented and
+                    inefficient for more than two decades since the
+                    privatisation of water services which started in 1994.
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <button
+                    class="btn btn-sm btn-default"
+                    (click)="openModal(addModal)"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    (click)="successAlert('Enabled Content')"
+                    class="btn btn-sm btn-success"
+                  >
+                    Enable
+                  </button>
+                  <button
+                    (click)="successAlert('Disabled Content')"
+                    class="btn btn-sm btn-primary"
+                  >
+                    Disable
+                  </button>
+                  <button
+                    (click)="successAlert('Post Content')"
+                    class="btn btn-sm btn-info"
+                  >
+                    Post Now
+                  </button>
+                  <button
+                    (click)="successAlert('Delete Content')"
+                    class="btn btn-sm btn-danger"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="list-group-item list-group-item-action flex-column align-items-start py-4 px-4"
+              href="javascript:void(0)"
+            >
+              <div class="d-flex w-100 justify-content-between">
+                <div>
+                  <div class="d-flex w-100 align-items-center">
+                    <a class="avatar avatar-xs mr-2 bg-white">
+                      <i class="fab fa-facebook text-blue"></i>
+                    </a>
+
+                    <h5 class="mb-1">Facebook</h5>
+                  </div>
+                </div>
+
+                <small> 2 hrs ago </small>
+              </div>
+
+              <h4 class="mt-3 mb-1"></h4>
+
+              <div class="row">
+                <div class="col-md-10">
+                  <p class="text-sm mb-0">
+                    The water services industry in Selangor, Federal Territories
+                    of Kuala Lumpur and Putrajaya has been highly fragmented and
+                    inefficient for more than two decades since the
+                    privatisation of water services which started in 1994.
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <button
+                    class="btn btn-sm btn-default"
+                    (click)="openModal(addModal)"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    (click)="successAlert('Enabled Content')"
+                    class="btn btn-sm btn-success"
+                  >
+                    Enable
+                  </button>
+                  <button
+                    (click)="successAlert('Disabled Content')"
+                    class="btn btn-sm btn-primary"
+                  >
+                    Disable
+                  </button>
+                  <button
+                    (click)="successAlert('Post Content')"
+                    class="btn btn-sm btn-info"
+                  >
+                    Post Now
+                  </button>
+                  <button
+                    (click)="successAlert('Delete Content')"
+                    class="btn btn-sm btn-danger"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="list-group-item list-group-item-action flex-column align-items-start py-4 px-4"
+              href="javascript:void(0)"
+            >
+              <div class="d-flex w-100 justify-content-between">
+                <div>
+                  <div class="d-flex w-100 align-items-center">
+                    <a class="avatar avatar-xs mr-2 bg-white">
+                      <i class="fab fa-twitter text-blue"></i>
+                    </a>
+
+                    <h5 class="mb-1">Twitter</h5>
+                  </div>
+                </div>
+
+                <small> 1 day ago </small>
+              </div>
+
+              <h4 class="mt-3 mb-1"></h4>
+
+              <div class="row">
+                <div class="col-md-10">
+                  <p class="text-sm mb-0">
+                    The water services industry in Selangor, Federal Territories
+                    of Kuala Lumpur and Putrajaya has been highly fragmented and
+                    inefficient for more than two decades since the
+                    privatisation of water services which started in 1994.
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <button
+                    class="btn btn-sm btn-default"
+                    (click)="openModal(addModal)"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    (click)="successAlert('Enabled Content')"
+                    class="btn btn-sm btn-success"
+                  >
+                    Enable
+                  </button>
+                  <button
+                    (click)="successAlert('Disabled Content')"
+                    class="btn btn-sm btn-primary"
+                  >
+                    Disable
+                  </button>
+                  <button
+                    (click)="successAlert('Post Content')"
+                    class="btn btn-sm btn-info"
+                  >
+                    Post Now
+                  </button>
+                  <button
+                    (click)="successAlert('Delete Content')"
+                    class="btn btn-sm btn-danger"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="list-group-item list-group-item-action flex-column align-items-start py-4 px-4"
+              href="javascript:void(0)"
+            >
+              <div class="d-flex w-100 justify-content-between">
+                <div>
+                  <div class="d-flex w-100 align-items-center">
+                    <a class="avatar avatar-xs mr-2 bg-white">
+                      <i class="fab fa-facebook text-blue"></i>
+                    </a>
+
+                    <h5 class="mb-1">Facebook</h5>
+                  </div>
+                </div>
+
+                <small> 2 hrs ago </small>
+              </div>
+
+              <h4 class="mt-3 mb-1"></h4>
+
+              <div class="row">
+                <div class="col-md-10">
+                  <p class="text-sm mb-0">
+                    The water services industry in Selangor, Federal Territories
+                    of Kuala Lumpur and Putrajaya has been highly fragmented and
+                    inefficient for more than two decades since the
+                    privatisation of water services which started in 1994.
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <button
+                    class="btn btn-sm btn-default"
+                    (click)="openModal(addModal)"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    (click)="successAlert('Enabled Content')"
+                    class="btn btn-sm btn-success"
+                  >
+                    Enable
+                  </button>
+                  <button
+                    (click)="successAlert('Disabled Content')"
+                    class="btn btn-sm btn-primary"
+                  >
+                    Disable
+                  </button>
+                  <button
+                    (click)="successAlert('Post Content')"
+                    class="btn btn-sm btn-info"
+                  >
+                    Post Now
+                  </button>
+                  <button
+                    (click)="successAlert('Delete Content')"
+                    class="btn btn-sm btn-danger"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="list-group-item list-group-item-action flex-column align-items-start py-4 px-4"
+              href="javascript:void(0)"
+            >
+              <div class="d-flex w-100 justify-content-between">
+                <div>
+                  <div class="d-flex w-100 align-items-center">
+                    <a class="avatar avatar-xs mr-2 bg-white">
+                      <i class="fab fa-twitter text-blue"></i>
+                    </a>
+
+                    <h5 class="mb-1">Twitter</h5>
+                  </div>
+                </div>
+
+                <small> 1 day ago </small>
+              </div>
+
+              <h4 class="mt-3 mb-1"></h4>
+              <div class="row">
+                <div class="col-md-10">
+                  <p class="text-sm mb-0">
+                    The water services industry in Selangor, Federal Territories
+                    of Kuala Lumpur and Putrajaya has been highly fragmented and
+                    inefficient for more than two decades since the
+                    privatisation of water services which started in 1994.
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <button
+                    class="btn btn-sm btn-default"
+                    (click)="openModal(addModal)"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    (click)="successAlert('Enabled Content')"
+                    class="btn btn-sm btn-success"
+                  >
+                    Enable
+                  </button>
+                  <button
+                    (click)="successAlert('Disabled Content')"
+                    class="btn btn-sm btn-primary"
+                  >
+                    Disable
+                  </button>
+                  <button
+                    (click)="successAlert('Post Content')"
+                    class="btn btn-sm btn-info"
+                  >
+                    Post Now
+                  </button>
+                  <button
+                    (click)="successAlert('Delete Content')"
+                    class="btn btn-sm btn-danger"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #addModal>
+  <div class="modal-header bg-default">
+    <h6 class="modal-title text-white my-auto" id="modal-title-default">
+      Yearly Pass Application
+    </h6>
+
+    <button
+      aria-label="Close"
+      class="close"
+      data-dismiss="modal"
+      type="button"
+      (click)="closeModal()"
+    >
+      <span aria-hidden="true" class="text-white my-auto"> × </span>
+    </button>
+  </div>
+
+  <div class="modal-body bg-secondary">
+    <form>
+      <div class="form-group">
+        <label class="form-control-label">Post</label>
+
+        <textarea
+          class="form-control"
+          placeholder="Write your post"
+          rows="4"
+        ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-control-label">Date Post</label>
+        <input class="form-control" type="datetime-local" />
+      </div>
+    </form>
+  </div>
+
+  <div class="modal-footer bg-secondary text-right">
+    <p>
+      <button
+        class="btn btn-success"
+        type="button"
+        (click)="successAlert('add data')"
+      >
+        Create
+      </button>
+
+      <button
+        class="btn btn-outline-danger ml-auto"
+        data-dismiss="modal"
+        type="button"
+        (click)="closeModal()"
+      >
+        Close
+      </button>
+    </p>
+  </div>
+</ng-template>
